@@ -38,6 +38,11 @@
     color: whitesmoke;
 }
 
+#ver-contrasenia{
+    border-radius: 10px;
+    margin: 5%;
+    
+}
 @media(max-width:400px){
     #login{
         margin-top: 10%;

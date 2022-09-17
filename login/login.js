@@ -7,13 +7,18 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
         event.preventDefault();
         const url = `${baseUrl}/authentication/Login`;
-
+        var usernameErrorElement
+        usernameErrorElement = document.getElementById("login-errors");
         if (!Boolean(event.currentTarget.Correo_user.value)) {
-            var usernameErrorElement = document.getElementById("login-errors");
             usernameErrorElement.textContent = "username is requered"
             usernameErrorElement.style.display = "block"
             console.log(event.currentTarget.contraseña.value)
         }
+        else{
+            usernameErrorElement.textContent = ""
+            usernameErrorElement.style.display = "hidden"
+        }
+
         var data = {
             Email: event.currentTarget.Correo_user.value,
             Password: event.currentTarget.contraseña.value
@@ -29,10 +34,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
                     //debugger;
                     sessionStorage.setItem("jwt", data.message);
                     console.log("SESION", sessionStorage)
-                    window.location.href = "../main.html";
+                    //window.location.href = "../main.html";
+                    window.location.href = "../Storage/storage-car/storage-car.html";
 
                 });
-            // } else {
+            } else {
+                alert("No Se puede iniciar sesion")
             //     let err = new Error("HTTP status code: " + response.status)
             //     err.response = response
             //     err.status = response.status
@@ -62,6 +69,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
         //console.log("iniciosesio",aux[1].type)
     }
+    document.getElementById("contraseña").addEventListener('change',(e)=>{  
+        console.log("ee",e.currentTarget)
+            if(!Boolean(e.currentTarget.value))
+            {
+                e.currentTarget.style.background="red"
+            }
+            else{
+                e.currentTarget.style.background="white"
+            }
+        });
+
     document.getElementById("ver-contrasenia").addEventListener('click', VerContraseña)
     document.getElementById("InicioSesion").addEventListener('submit', login);
 });

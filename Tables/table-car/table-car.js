@@ -71,10 +71,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                  <td>${client.bodyType}</td>
                  <td>${client.fuelType}</td>
                  <td>${client.amountAvailable}</td>
-                 <td>${client.price}</td>
-                 <td> <button class="verBoton" data-view-client-id="${client.id}">Ver</button></td>
-                 <td> <button class="editarBoton" data-edit-client-id="${client.id}">Editar</button></td>
-                 <td> <button class="eliminarBoton" data-delete-client-id="${client.id}">Eliminar</button></td>`]
+                 <td>${client.price}</td>`]
                 });
                 //var clientContent=`<ul>${clientList.join('')}</ul>`;
                 //ar clientContent=`<tr>${clientList[0]}</tr><tr>${clientList[1]}</tr>`;

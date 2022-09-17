@@ -68,10 +68,7 @@ document.addEventListener('DOMContentLoaded',function(event){
                  <td>${client.lastName}</td>
                  <td>${client.dateOfBirth}</td>
                  <td>${client.gender}</td>
-                 <td>${client.phoneNumber}</td>
-                 <td> <button class="verBoton" data-view-client-id="${client.id}">Ver</button></td>
-                 <td> <button class="editarBoton" data-edit-client-id="${client.id}">Editar</button></td>
-                 <td> <button class="eliminarBoton" data-delete-client-id="${client.id}">Eliminar</button></td>`]
+                 <td>${client.phoneNumber}</td>`]
                 });
                 //var clientContent=`<ul>${clientList.join('')}</ul>`;
                 //ar clientContent=`<tr>${clientList[0]}</tr><tr>${clientList[1]}</tr>`;

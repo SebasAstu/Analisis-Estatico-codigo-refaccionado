@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 price: parseInt(event.currentTarget.price.value == "" ? "0" : event.currentTarget.price .value)
         };
         console.log("data", data)
+        let aux11=document.getElementById("formulario-auto")
         const formData=new FormData(event.currentTarget)
         console.log("formDataf",formData)
         fetch(url, {
@@ -138,7 +139,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 alert("El automovil del cliente fue actualizado")
             }
             else {
-                response.text().then(alert("No se puede actualizar el automovil del cliente "));
+                response.text().then(response=>{
+                    alert(response)
+                })
+                //response.text().then(alert("No se puede actualizar el automovil del cliente "));
             }
         })
     }
@@ -163,16 +167,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
             let data = await response.json();
             console.log("dataCargarAuto",data)
             console.log("t!!", event)
-            console.log(this)
+            console.log("aux",aux)
             console.log("data.imagen",data.imagen)
             const imageUrlCar = data.imagen? `${baseUrl}/${data.imagen}` : "";
-            aux.children[1].children[1].value=data.name
-            aux.children[1].children[3].value=data.brand
-            aux.children[1].children[5].value=data.type
-            aux.children[1].children[7].value=data.motorType
-            aux.children[1].children[9].value=data.bodyType
-            aux.children[1].children[11].value=data.fuelType
-            console.log(new Date(data.dateOfBirth))
             if(typeCar=="car")
             {
                 let aux1=document.getElementById("amountAvailable")
@@ -181,11 +178,31 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 aux1.disabled = true
                 let aux2=document.getElementById("amountlabel")
                 aux2.style.visibility="hidden"
+                aux.children[1].children[5].readOnly=true
+                aux.children[1].children[5].style.backgroundColor="lightblue"
+                aux.children[1].children[7].readOnly=true
+                aux.children[1].children[7].style.backgroundColor="lightblue"
+                aux.children[1].children[9].readOnly=true
+                aux.children[1].children[9].style.backgroundColor="lightblue"
+                aux.children[1].children[11].readOnly=true
+                aux.children[1].children[11].style.backgroundColor="lightblue"
+                aux.children[3].children[3].readOnly=true;
+                aux.children[3].children[3].style.backgroundColor="lightblue"
 
             }
             else{
                 aux.children[3].children[1].value=data.amountAvailable
             }
+            aux.children[1].children[1].value=data.name
+            aux.children[1].children[1].readOnly =true
+            aux.children[1].children[1].style.backgroundColor="lightblue"
+            aux.children[1].children[3].value=data.brand
+            aux.children[1].children[3].readOnly =true;
+            aux.children[1].children[3].style.backgroundColor="lightblue"
+            aux.children[1].children[5].value=data.type
+            aux.children[1].children[7].value=data.motorType
+            aux.children[1].children[9].value=data.bodyType
+            aux.children[1].children[11].value=data.fuelType
             aux.children[3].children[3].value=data.price
             let imagenPerfil=document.getElementById("imagenView")
             imagenPerfil.style.visibility="visible"
@@ -199,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         document.getElementById("formulario-auto").addEventListener('submit', ObtenerAutomovil)
     }
     else {
-        let r=document.querySelector("#formulario-auto .titulo").innerHTML ="Actualizar cliente <hr>";
+        let r=document.querySelector("#formulario-auto .titulo").innerHTML ="Actualizar automovil <hr>";
         document.getElementById("registrarBoton").value = "Actualizar"
         CargarAutomovil();
         document.getElementById("formulario-auto").addEventListener('submit', updateAutomovil)

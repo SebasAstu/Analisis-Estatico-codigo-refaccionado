@@ -1,15 +1,15 @@
 function readURL(input) {
     //debugger
     console.log(input)
-    const imagen=document.getElementById("imagenView")
+    const imagen = document.getElementById("imagenView")
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        imagen.style.visibility="visible"
+        imagen.style.visibility = "visible"
         reader.onload = function (e) {
 
-           imagen.src= e.target.result
-           imagen.width="350";
-           imagen.height="250";
+            imagen.src = e.target.result
+            imagen.width = "350";
+            imagen.height = "250";
             /*$('#blah')
                 .attr('src', e.target.result)
                 .width(150)
@@ -21,7 +21,7 @@ function readURL(input) {
 
 }
 document.addEventListener('DOMContentLoaded', function (event) {
-    if(!Boolean(sessionStorage.getItem("jwt"))){
+    if (!Boolean(sessionStorage.getItem("jwt"))) {
         window.location.href = "../login/login.html";
     }
     let updating = false;
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
         else {
             let url = `${baseUrl}/client`;
-            console.log("event",event)
-            console.log("ct",event.currentTarget)
-            console.log("t",event.target)
+            console.log("event", event)
+            console.log("ct", event.currentTarget)
+            console.log("t", event.target)
 
             var data = {
                 firstName: event.currentTarget.name.value == "" ? "null" : event.currentTarget.name.value,
@@ -67,20 +67,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
             };
             console.log(data)
             //debugger
-            const formData=new FormData(event.currentTarget)
+            const formData = new FormData(event.currentTarget)
             var formData1 = {};
-            for(var pair of formData.entries()) {
+            for (var pair of formData.entries()) {
                 formData1[pair[0]] = pair[1]; //To convert to object
             }
             const plainFormData = Object.fromEntries(formData.entries());
-	        const formDataJsonString = JSON.stringify(plainFormData);
-            console.log("plainFormData",plainFormData)
-            console.log("formDataJsonString",formDataJsonString);
+            const formDataJsonString = JSON.stringify(plainFormData);
+            console.log("plainFormData", plainFormData)
+            console.log("formDataJsonString", formDataJsonString);
             fetch(url, {
                 //headers: { "Content-type": "multipart/form-data" },
                 method: 'POST',
                 //body: JSON.stringify(formData1)
-                body:formData
+                body: formData
             }).then(response => {
                 console.log("res", response.body)
                 console.log("res", response)
@@ -116,64 +116,86 @@ document.addEventListener('DOMContentLoaded', function (event) {
             phoneNumber: parseInt(event.currentTarget.phoneNumber.value == "" ? "0" : event.currentTarget.phoneNumber.value)
         };
         console.log("data", data)
-        const formData=new FormData(event.currentTarget)
-        fetch(url, {
+        const formData = new FormData(event.currentTarget)
+        await fetch(url, {
             //headers: { "Content-type": "application/json" },
             method: 'PUT',
             //body: JSON.stringify(data)
-            body:formData
+            body: formData
         }).then(response => {
             console.log("res", response.body)
             console.log("res", response)
-            //console.log("return response", response.status);
+            console.log("return response", response.status);
             if (response.status == 200) {
                 alert("cliente fue actualizado")
             }
             else {
-                response.text().then(alert("No se puede actualizar el cliente "));
+                response.text().then(response=>{
+                    alert(response)
+                })
+                //response.text().then(alert("No se puede actualizar el cliente "));
             }
         })
+        // let response= await fetch(url,{ method: 'PUT',body: formData});
+        // let data;
+        // try{
+        //     if(response.status==200){
+        //         data = await response.json();
+        //         alert("cliente fue actualizado")
+        // //     }
+        //     }
+        // }
+        // catch{
+        //     alert("No se encontro al cliente")
+        // }
+
     }
+
     async function CargarClient(event) {
         //debugger
-        let aux=document.getElementById("formulario-auto")
+        let aux = document.getElementById("formulario-auto")
         console.log(trueclientID)
         console.log(aux.children)
         console.log(aux.children[1])
-        console.log("child 3",aux.children[3].children)
-        console.log("typeimage",typeof aux.children[3].children[1])
+        console.log("child 3", aux.children[3].children)
+        console.log("typeimage", typeof aux.children[3].children[1])
         const url = `${baseUrl}/client/${trueclientID}`;
         let response = await fetch(url);
         if (response.status == 200) {
             let data = await response.json();
-            console.log("data",data)
+            console.log("data", data)
             console.log("t!!", event)
             console.log(this)
-            const imageUrlCar = data.imagen? `${baseUrl}/${data.imagen}` : "";
-            aux.children[1].children[1].value=data.firstName
-            aux.children[1].children[3].value=data.middleName
-            aux.children[1].children[5].value=data.lastName
-            aux.children[1].children[7].value=new Date(data.dateOfBirth)
-            console.log(new Date(data.dateOfBirth)) 
-            let imagenPerfil=document.getElementById("imagenView")
-            imagenPerfil.style.visibility="visible"
-            imagenPerfil.width="350";
-            imagenPerfil.height="250";
-            imagenPerfil.src=imageUrlCar
-            
-            //aux.children[3].children[2].src=imageUrlCar
-            aux.children[3].children[5].value=data.email
-            aux.children[3].children[7].value=data.phoneNumber
+            const imageUrlCar = data.imagen ? `${baseUrl}/${data.imagen}` : "";
+            aux.children[1].children[1].value = data.firstName
+            aux.children[1].children[1].readOnly = true
+            aux.children[1].children[1].style.backgroundColor = "lightblue"
+            aux.children[1].children[3].value = data.middleName
+            aux.children[1].children[3].readOnly = true
+            aux.children[1].children[3].style.backgroundColor = "lightblue"
+            aux.children[1].children[5].value = data.lastName
+            aux.children[1].children[5].readOnly = true
+            aux.children[1].children[5].style.backgroundColor = "lightblue"
+            aux.children[1].children[7].value = new Date(data.dateOfBirth)
+            // console.log(new Date(data.dateOfBirth))
+            let imagenPerfil = document.getElementById("imagenView")
+            imagenPerfil.style.visibility = "visible"
+            imagenPerfil.width = "350";
+            imagenPerfil.height = "250";
+            imagenPerfil.src = imageUrlCar
 
-            aux.children[6].children[0].value=data.gender
+            //aux.children[3].children[2].src=imageUrlCar
+            aux.children[3].children[5].value = data.email
+            aux.children[3].children[7].value = data.phoneNumber
+            aux.children[6].children[0].value = data.gender
         }
     }
     if (!updating) {
         document.getElementById("formulario-auto").addEventListener('submit', PostClient)
-        document.getElementById("imagen").addEventListener("change",readURL)
+        document.getElementById("imagen").addEventListener("change", readURL)
     }
     else {
-        let r=document.querySelector("#formulario-auto .titulo").innerHTML ="Actualizar cliente <hr>";
+        let r = document.querySelector("#formulario-auto .titulo").innerHTML = "Actualizar cliente <hr>";
         document.getElementById("registrarBoton").value = "Actualizar"
         CargarClient();
         document.getElementById("formulario-auto").addEventListener('submit', updateClient)
