@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./table-car.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./table-car.css">
+    <link rel="stylesheet" href="../table-client/table-client.css">
+</head>
+
+<body>
+    <nav id="barra-navegacion">
+        <div id="cabecera">
+            <a href="../../main.html"><img src="../../assets/imagen/Logo_Car_Dealer.png" alt=""></a>
+        </div>
+        <ul id="opciones">
+            <!-- <li><a href="./Tables/table-client/table-client.html">Tablas</a></li>
+            <li><a href="./forms/form-client.html">Registro</a></li> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="../..//Storage/storage-car/storage-car.html">Autos</a>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Registro
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../../forms/form-client.html">Registro Cliente</a>
+                    <a href="../../forms/Form-car/form-car.html">Registro Automovil</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Tablas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../../Tables/table-client/table-client.html">Tabla Clientes</a>
+                    <a href="../../Tables/table-car/table-car.html">Tabla Automoviles</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="../../About/about.html">about</a>
+                </button>
+            </div>
+            <div class="dropdown"><button class="dropbtn"><a href="../../login/login.html">Iniciar Sesion</a>
+                </button>
+            </div>
+        </div>
+            <!-- <li><a href="./About/about.html">about</a></li>
+            <li><a href="./login/login.html">Iniciar Sesion</a></li> -->
+        </ul>
+    </nav>
+    <div class="contenedor-tabla">
+        <h1 class="titulo ">Lista de Automoviles</h1>
+        <hr>
+        <table class="tableStyle">
+            <th>
+                <tr id="Tabla-titulos">
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Tipo de automovil</th>
+                    <th>Tipo de motor</th>
+                    <th>Tipo de carroceria</th>
+                    <th>Tipo de gasolina</th>
+                    <th>Cantidad disponible</th>
+                    <th>Precio</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </th>
+            <tbody id="client-container">
+
+            </tbody>
+        </table>
+        <button id="fetch-btn">Cargar Clientes</button>
+    </div>
+    <footer id="pie-pagina">
+        <ul class="lista-Redes">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="">Whatsapp</a></li>
+            <li><a href="">Google+</a></li>
+        </ul>
+        <h3>Car dealer @Inconporate</h3>
+    </footer>
+</body>
+
+</html>

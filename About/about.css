@@ -1,0 +1,101 @@
+:root{
+    --btn-color-envio:rgba(5, 5, 197, 0.781) !important;
+}
+#opciones{
+    padding-top: 1em;
+}
+.contenedor-presentacion{
+    background: rgb(238, 238, 238,0.7);;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: auto;
+}
+.historia-compañia{
+    padding: 1em;
+    margin: 0em 1em;
+    background: rgba(0, 0, 0, 0.641);
+    color: whitesmoke;
+    overflow: auto;
+    border-radius: 4em 1em 4em 1em;
+
+}
+
+.formulario-backgroud{
+    border-radius: 1em;
+    margin: 2em;
+    padding: 2em;
+    background: whitesmoke;
+    border-style: double;
+}
+
+.boton-envio{
+    background: none !important;
+    color: rgba(5, 5, 197, 0.781) !important;
+}
+.boton-envio:hover{
+    background: rgba(0, 0, 255, 0.856) !important;
+    color: whitesmoke !important;
+
+}
+#mapa{
+    padding: 1em;
+    margin: 1em;
+}
+.carousel-inner{
+    border-radius: 10px;
+}
+.lista-Redes{
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.lista-Redes li{
+    font-size: 1rem;
+    list-style: none;
+    margin: 0px 5px;
+}
+
+.lista-Redes li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.lista-Redes li a img{
+    width: 100px;
+    margin: 20px;
+}
+#pie-pagina{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1em;
+    background: rgba(0, 0, 0, 0.521);
+    justify-content:space-around
+}
+#contenedor-Sugerencias{
+    background: rgb(238, 238, 238,0.7);;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em;
+    height: auto;
+}
+@media(max-width: 800px){
+    .contenedor-presentacion{
+        background: rgb(238, 238, 238,0.7);;
+        border-radius: 1em;
+        padding: 1em;
+        margin: 0.5em;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        height: auto;
+    }
+}
+
+@media(max-width:590px){
+    #mapa{
+        width: auto;
+        height: auto;
+    }
+}

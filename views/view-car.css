@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    padding: 0%;
+    margin: 0%;
+}
+#opciones{
+    padding-top: 1em;
+}
+
+.contenedor-fichaTecnica{
+    background: rgb(238, 238, 238,0.7);;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 30em;
+}
+.ficha-tecnica{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);   
+    grid-template-rows: repeat(1,1fr);
+    position: relative;
+    background:#c7cfb7;;
+    margin: 0.5em;
+    border-radius: 1em;
+}
+.ficha-tecnica label{
+    margin-left: 6vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ficha-tecnica h3{
+    margin-left: 3vh;
+}
+.ficha-tecnica h1, h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#slider li{
+    opacity:0;
+}
+#slider li a{
+    list-style: none;
+}
+#ficha1,#ficha2,#ficha3{
+    position: absolute;
+    width: 90%;
+    height: auto;
+}
+#slider li:target{
+    opacity: 1;
+}
+.opciones-ficha-tecnica{
+    grid-row: 5/5;
+    justify-self: end;
+}
+.opciones-ficha-tecnica li{
+    display: inline;
+}
+.opciones-ficha-tecnica li a{
+    width: 150px;
+    height: 50px;
+    border-color: rgb(0, 173, 181);
+    background: rgb(0, 173, 181);
+    color: whitesmoke;
+    padding: 1em;
+    margin: 0.1em;
+    border-radius: 5em 2em;
+    text-decoration: none;
+    transition: opacity .5s;
+}
+.opciones-ficha-tecnica li a:hover{
+    background: green;
+    border: green solid;
+    color: whitesmoke;  
+}
+.ficha-tecnica-info{
+    grid-row: 1/ span 4;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    border:rgba(0, 0, 0, 0.671) solid;
+    margin: 1em;
+    border-radius: 1ch;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu{
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+
+@media(max-width: 800px){
+    
+    .contenedor-fichaTecnica{
+        background: rgba(128, 128, 128, 0.555);
+        border-radius: 1em;
+        padding: 1em;
+        margin: 0.5em;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        height: auto;
+    }
+}
+@media(min-width:1370px){
+    .contenedor-fichaTecnica{
+        background: rgba(128, 128, 128, 0.555);
+        border-radius: 1em;
+        padding: 1em;
+        margin: 0.5em;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+        height: auto;
+    }
+}

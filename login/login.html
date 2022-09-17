@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./login.css">
+    <script src="./login.js"></script>
+    <title>Car Dealer</title>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="login">
+            <img src="../assets/imagen/Logo_Car_Dealer.png" alt="">
+            <form id="InicioSesion">
+                <label for="Correo_user">Correo electronico</label>
+                <div id="login-errors" style="display: none; color:red;"></div>
+                <input type="email" id="Correo_user">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña">
+                <button id="ver-contrasenia">Ver contraseña</button>
+                <hr>
+                <a href="../login/create-user/create-user.html">Crear tu usuario</a>
+                <a href="../login/change-password/change-password.html">Cambiar tu constraseña</a>
+                <hr>
+                <input type="submit" value="Inciar" id="enviarbtn">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

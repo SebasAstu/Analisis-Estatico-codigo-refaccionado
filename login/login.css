@@ -1,0 +1,47 @@
+
+
+#login{
+    display: grid;
+    border:5px green solid;
+    margin-top: 10%;
+    margin-left: 20%;
+    width: 60%;
+    padding: 1em;
+    background: rgb(238, 238, 238,0.7);
+    border-radius: 10%;
+}
+#login img{
+    width: 60%;
+    margin-left: 20%;
+}
+#InicioSesion{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+#InicioSesion input{
+    margin: 0.5em;
+    width: 200px;
+}
+#enviarbtn{
+    margin: 1em 0em;
+    background: rgb(4, 57, 75);
+    border: rgb(4, 57, 75);
+    border-radius: 1em;
+    color: whitesmoke;
+    padding: 1em;
+    transition: opacity .10s;
+}
+#enviarbtn:hover{
+    background: rgb(24, 24, 219);
+    border: rgb(24, 24, 219);
+    color: whitesmoke;
+}
+
+@media(max-width:400px){
+    #login{
+        margin-top: 10%;
+        margin-left: 10%;
+        width: 80%;
+    }
+}

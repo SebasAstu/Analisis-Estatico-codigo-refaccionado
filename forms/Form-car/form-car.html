@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./form-car.css">
+    <link rel="stylesheet" href="../form-client.css">   
+    <script src="./form-car.js"></script>
+    <title>Car Dealer</title>
+</head>
+
+<body>
+    <nav id="barra-navegacion">
+        <div id="cabecera">
+            <a href="../../main.html"><img src="../../assets/imagen/Logo_Car_Dealer.png" alt=""></a>
+        </div>
+        <ul id="opciones">
+            <!-- <li><a href="./Tables/table-client/table-client.html">Tablas</a></li>
+            <li><a href="./forms/form-client.html">Registro</a></li> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="../../Storage/storage-car/storage-car.html">Autos</a>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Registro
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../../forms/form-client.html">Registro Cliente</a>
+                    <a href="../../forms/Form-car/form-car.html">Registro Automovil</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Tablas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../../Tables/table-client/table-client.html">Tabla Clientes</a>
+                    <a href="../../Tables/table-car/table-car.html">Tabla Automoviles</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="../../About/about.html">about</a>
+                </button>
+            </div>
+            <div class="dropdown"><button class="dropbtn"><a href="../../login/login.html">Iniciar Sesion</a>
+                </button>
+            </div>
+        </div>
+            <!-- <li><a href="./About/about.html">about</a></li>
+            <li><a href="./login/login.html">Iniciar Sesion</a></li> -->
+        </ul>
+    </nav>
+    <div class="contenedor-formulario">
+        <form id="formulario-auto">
+            <h1 class="titulo" style="padding-top: 5%;" >Registro Automoviles
+                <hr>
+            </h1>
+            <div class="seccion" id="seccion1">
+                <label for="name">nombre:</label>
+                <input type="text" name="name" id="name">
+                <label for="brand">Marca: </label>
+                <input type="text" name="brand" id="brand">
+                <label for="type">Tipo de automovil: </label>
+                <input type="text" name="type" id="type">
+                <label for="motorType">Tipo de motor: </label>
+                <input type="text" name="motorType" id="motorType">
+                <label for="bodyType">tipo de carroceria: </label>
+                <input type="text" name="bodyType" id="bodyType">
+                <label for="fuelType">Tipo de gasolina: </label>
+                <input type="text" name="fuelType" id="fuelType">
+            </div>
+            <hr>
+            <div class="seccion" id="seccion2">
+                <label id="amountlabel" for="amountAvailable">Cantidad disponible: </label>
+                <input type="number" name="amountAvailable" id="amountAvailable">
+                <label for="price">Precio: </label>
+                <input type="number" name="price" id="price">
+                <label for="imagen">Fotografia </label>
+                <input type="file" name="imagenURL" id="imagen" onchange="readURL(this);">
+                <img id="imagenView" src="#" alt="your image" style="visibility:collapse;"/><br>
+            </div>
+            <hr>
+            <!--<label>Sexo</label>
+             <div class="seccion" id="seccion3" name="sexo">
+                <select name="sexo" id="gender">
+                    <option value="">seleccione uno</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+                <input type="radio" id="masculino" name="sexo">
+                <label for="masculino">masculino</label>
+                <input type="radio" id="femenino" name="sexo">
+                <label for="femenino">femenino</label>
+                <input type="radio" id="otros" name="sexo">
+                <label for="femenino">otros</label>
+            </div> -->
+            <hr>
+            <div id="seccion4">
+                <input id="registrarBoton" type="submit" value="Registrar">
+                <a id="cancelarBoton"href="../../tables/table-car/table-car.html">Cancelar</a>
+            </div>
+        </form>
+    </div>
+    <footer id="pie-pagina">
+        <ul class="lista-Redes">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="">Whatsapp</a></li>
+            <li><a href="">Google+</a></li>
+        </ul>
+        <h3>Car dealer @Inconporate</h3>
+    </footer>
+</body>   

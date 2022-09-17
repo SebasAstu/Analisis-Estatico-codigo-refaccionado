@@ -1,0 +1,87 @@
+body{
+    justify-content:center;
+    align-self: center;
+}
+#formulario-auto{
+    background: rgb(238, 238, 238,0.7);
+    position: relative;
+    margin: 3% 10% ;
+    border: 1px lack solid;
+    padding: 1em;
+    display: flex;
+    flex-flow:column wrap;
+    overflow: hidden;
+    border-radius: 1em;
+}
+input{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+label{
+    text-transform: capitalize;
+    font-style:italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 2%;
+}
+
+#registrarBoton{
+    font-size: 18px;
+    border: 2px solid  #29bb89;
+    color: #438a5e;
+    background: none;
+    margin: 5px;
+}
+#registrarBoton:hover{
+    border: 2px solid  #29bb89;
+    background: #29bb89;
+    color: whitesmoke;
+}
+
+#cancelarBoton{
+    font-size: 18px;
+    border: #e84545 solid;
+    color: #e84545;
+    background: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 1px 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+#cancelarBoton:hover{
+    border: #e84545 solid;
+    background: #e84545;
+    color: whitesmoke;
+    margin: 5px;
+}
+.seccion{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+    align-self: start;
+    margin: 15px;
+    padding: 10px
+}
+#seccion1 input{
+    width: 200px;
+}
+#seccion2 input{
+    width: 250px;
+}
+#seccion3{
+    display: inline;
+    width: 100%;
+}
+#seccion3 input{
+    width: 15px;
+    height: 20px;
+}
+
+#seccion4{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3% 3%;
+}

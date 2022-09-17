@@ -1,0 +1,87 @@
+#client-container{
+    background-color: rgb(226, 233, 236);
+    border: greenyellow;
+}
+.contenedor-tabla{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tableStyle{
+    margin: 5%;
+    background: rgba(245, 245, 245, 0.753);
+
+}
+.contenedor-tabla{
+    background: rgba(211, 211, 211, 0.486);
+    border-radius: 1%;
+    margin: 5%;
+
+}
+#fetch-btn{
+    width: 120px;
+    padding: 5px;
+    background: lightgrey;
+    border: rgba(0, 128, 0, 0.637) solid;
+    border-radius:15%;
+    color: rgba(0, 128, 0, 0.637);
+    align-self: flex-end;
+    margin:1%;
+}
+#fetch-btn:hover{
+    width: 120px;
+    padding: 5px;
+    background: green;
+    color: whitesmoke;
+    align-self: flex-end;
+    margin:1%;
+}
+#Tabla-titulos{
+    background: linear-gradient(100deg,rgb(57, 62, 70) 50%,rgb(0, 173, 181) 70%);
+    color: whitesmoke;
+}
+.titulo{
+    padding-top: 5%;
+}
+.verBoton{
+    padding: 10px;
+    border: rgba(0, 128, 0, 0.521) solid;
+    border-radius: 10%;
+    background: none;
+    color: rgba(0, 128, 0, 0.521);
+}
+.verBoton:hover{
+    padding: 10px;
+    border: green solid;
+    border-radius: 10%;
+    background: green;
+    color: whitesmoke;
+}
+.eliminarBoton{
+    padding: 10px;
+    border: rgba(255, 0, 0, 0.514) solid;
+    border-radius: 10%;
+    background: none;
+    color: rgba(255, 0, 0, 0.514);
+}
+.eliminarBoton:hover{
+    padding: 10px;
+    border: red solid;
+    border-radius: 10%;
+    background: red;
+    color: whitesmoke;
+}
+.editarBoton{
+    padding: 10px;
+    border: rgba(0, 0, 255, 0.507) solid;
+    border-radius: 10%;
+    background: none;
+    color: rgba(0, 0, 255, 0.507);
+}
+.editarBoton:hover{
+    padding: 10px;
+    border: blue solid;
+    border-radius: 10%;
+    background: blue;
+    color: whitesmoke;
+}

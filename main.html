@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="./code.js"></script>
+    <title>Car Dealer</title>
+</head>
+
+<body>
+    <nav id="barra-navegacion">
+        <div id="cabecera">
+            <a href="main.html"><img src="./assets/imagen/Logo_Car_Dealer.png" alt=""></a>
+        </div>
+        <ul id="opciones">
+            <!-- <li><a href="./Tables/table-client/table-client.html">Tablas</a></li>
+            <li><a href="./forms/form-client.html">Registro</a></li> -->
+            <div class="dropdown">
+                <button class="dropbtn"><a href="./Storage/storage-car/storage-car.html">Autos</a>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Registro
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./forms/form-client.html">Registro Cliente</a>
+                    <a href="./forms/Form-car/form-car.html">Registro Automovil</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Tablas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./Tables/table-client/table-client.html">Tabla Clientes</a>
+                    <a href="./Tables/table-car/table-car.html">Tabla Automoviles</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="./About/about.html">about</a>
+                </button>
+            </div>
+            <div class="dropdown"><button class="dropbtn"><a href="./login/login.html">Iniciar Sesion</a>
+                </button>
+            </div>
+        </div>
+            <!-- <li><a href="./About/about.html">about</a></li>
+            <li><a href="./login/login.html">Iniciar Sesion</a></li> -->
+        </ul>
+    </nav>
+    <div class="contenedor-grid">
+        <div class="carrusel" id="carrusel">
+            <button class="atras">&#60</button>
+            <button class="adelante">&#62</button>
+            <div class="carrusel_Tarjetas" id="carrousel1">
+                <label id="texto_carrusel">El Lykan HyperSport es un exclusivo automóvil superdeportivo coupé
+                    desarrollado por la empresa
+                    libanesa W Motors y diseñado por Anthony Janarelly,​ un diseñador inglés egresado de la Universidad
+                    de
+                    Coventry.
+                    Fue presentado en enero de 2013 en el Salón Internacional del Automóvil de Qatar y es uno de los
+                    automóviles más caros y exclusivos del mundo, así como el primer superdeportivo de origen árabe.
+
+                    El auto se produce en colaboración con Magna Steyr y Studiotorino, de Italia; y con Ruf Automobile,
+                    de
+                    Alemania.
+                </label>
+            </div>
+        </div>
+        <br>
+        <h3 class="titulo">Disponibles</h3>
+        <hr>
+        <div class="lista_Tarjetas">
+            <div class="tarjeta">
+                <img class="imagen-tarjeta" src="./assets/imagen/w-motors-lykan-hypersport.928748.jpg">
+                <h3 class="titulo-tarjeta">Lykan-hypersport</h3>
+                <hr>
+                <label class="contenido-tarjeta">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptates,
+                    recusandae
+                    consequatur laudantium rerum consectetur numquam saepe tempora molestiae, similique unde
+                    suscipit
+                    assumenda voluptas, commodi et omnis illum odio sunt minima.
+                </label>
+                <a class="ver-mas-tarjeta" href="">Ver mas</a>
+            </div>
+            <div class="tarjeta">
+                <img class="imagen-tarjeta" src="./assets/imagen/bmw-3-series-modellfinder.png">
+                <h3 class="titulo-tarjeta">bmw-3-series</h3>
+                <hr>
+                <label class="contenido-tarjeta">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptates,
+                    recusandae
+                    consequatur laudantium rerum consectetur numquam saepe tempora molestiae, similique unde
+                    suscipit
+                    assumenda voluptas, commodi et omnis illum odio sunt minima.
+                </label>
+                <a class="ver-mas-tarjeta" href="">Ver mas</a>
+            </div>
+            <div class="tarjeta">
+                <img class="imagen-tarjeta" src="./assets/imagen/aston-martin-db11-v8-shadow-edition-1582736929.jpg">
+                <h3 class="titulo-tarjeta">aston-martin-db11</h3>
+                <hr>
+                <label class="contenido-tarjeta">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptates,
+                    recusandae
+                    consequatur laudantium rerum consectetur numquam saepe tempora molestiae, similique unde
+                    suscipit
+                    assumenda voluptas, commodi et omnis illum odio sunt minima.
+                </label>
+                <a class="ver-mas-tarjeta" href="">Ver mas</a>
+            </div>
+            <div class="tarjeta">
+                <img class="imagen-tarjeta" src="./assets/imagen/oaeof8vvmiugq10ufewm.png">
+                <h3 class="titulo-tarjeta">Corvette c8</h3>
+                <hr>
+                <label class="contenido-tarjeta">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Voluptates,
+                    recusandae
+                    consequatur laudantium rerum consectetur numquam saepe tempora molestiae, similique unde
+                    suscipit
+                    assumenda voluptas, commodi et omnis illum odio sunt minima.
+                </label>
+                <a class="ver-mas-tarjeta" href="./views/view-car.html">Ver mas</a>
+            </div>
+        </div>
+        <br>
+        <h3 class="titulo">Ofertas</h3>
+        <hr>
+        <div class="tarjeta_Unica" id="tarjeta_unica">
+            <label id="tarjeta_Unica_texto" for="tarjeta_unica">
+                Por encima del modelo base hay dos acabados más y, para cualquiera de ellos, se ofrece el paquete
+                Z51
+                Performance que por 5.000 dólares eleva la potencia del V8 hasta los 502 CV y añade interesantes
+                chucherías como un nuevo sistema de escape, un diferencial autoblocante, frenos más generosos,
+                neumáticos Michelin Pilot Sport 4S o mejoras de refrigeración. El acabado intermedio o Corvette 2LT
+                parte de los 67.925 dólares (61.300 euros) y añade extras como el Head-Up Display, asientos
+                ventilados y
+                calefactados, volante también calefactado, sistema de sonido Bose con 14 altavoces, navegador, radio
+                por
+                satélite SiriusXM o más asistentes de conducción, además del sistema de adquisición de datos o
+                Performance Data Recorder.
+
+                El más equipado de todos o 3LT tiene un precio base de 71.945 dólares (65.000 euros) y añade un
+                habitáculo mejorado con acabados en cuero, ante y fibra de carbono, o asientos deportivos GT2
+                tapizados
+                en cuero Nappa.
+            </label>
+            <a id="ver-mas-tarjeta-unica" href="./views/view-car.html">Ver mas</a>
+        </div>
+        <div id="div-chat">
+            <div class="chat">
+                <h1>Chat1</h1>
+                <form action="./main.html" method="post" class="form-chat">
+                    <label for="usuario1">Preguntas</label>
+                    <input type="text" name="usuario1" id="usuario1"><br>
+                    <input type="button" value="Enviar" onclick="respuesta(usuario1,'respuesta1','res1')">
+                </form>
+                <label for="respuesta">Respuesta</label>
+                <input type="text" name="respuesta1" id="respuesta1">
+            </div>
+            <div class="chat">
+                <h1>Chat2</h1>
+                <form action="./main.html" method="post" class="form-chat">
+                    <label for="usuario2">Preguntas</label>
+                    <input type="text" name="usuario2" id="usuario2"><br>
+                    <input type="button" value="Enviar" onclick="respuesta(usuario2,'respuesta2','res2')">
+                </form>
+                <label for="respuesta2">Respuesta</label>
+                <input type="text" name="respuesta2" id="respuesta2">
+            </div>
+        </div>
+        <div id="div-chat">
+            <textarea name="res1" id="res1" cols="30" rows="10"></textarea>
+            <hr>
+            <textarea name="res2" id="res2" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <footer id="pie-pagina">
+        <ul class="lista-Redes">
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="">Whatsapp</a></li>
+            <li><a href="">Google+</a></li>
+        </ul>
+        <h3>Car dealer @Inconporate</h3>
+    </footer>
+</body>
+
+</html>

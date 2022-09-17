@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <title>Car Dealer</title>
+</head>
+
+<body>
+  <nav id="barra-navegacion">
+    <div id="cabecera">
+        <a href="../main.html"><img src="../assets/imagen/Logo_Car_Dealer.png" alt=""></a>
+    </div>
+    <ul id="opciones">
+        <!-- <li><a href="./Tables/table-client/table-client.html">Tablas</a></li>
+        <li><a href="./forms/form-client.html">Registro</a></li> -->
+        <div class="dropdown">
+            <button class="dropbtn"><a href="../Storage/storage-car/storage-car.html">Autos</a>
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Registro
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../forms/form-client.html">Registro Cliente</a>
+                <a href="../forms/Form-car/form-car.html">Registro Automovil</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Tablas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../Tables/table-client/table-client.html">Tabla Clientes</a>
+                <a href="../Tables/table-car/table-car.html">Tabla Automoviles</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="../About/about.html">about</a>
+            </button>
+        </div>
+        <div class="dropdown"><button class="dropbtn"><a href="../login/login.html">Iniciar Sesion</a>
+            </button>
+        </div>
+    </div>
+        <!-- <li><a href="./About/about.html">about</a></li>
+        <li><a href="./login/login.html">Iniciar Sesion</a></li> -->
+    </ul>
+</nav>
+  <div class="contenedor-presentacion">
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/imagen/chevrolet-corvette-stingray-2020-5-claves-201959274-1563558374_1.jpg"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Corvette c8</h5>
+            <p>Hoy Chevrolet ha confirmado que, efectivamente, la versión básica del 2020 Corvette C8</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/imagen/w-motors-lykan-hypersport.928748.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>lykan-hypersport</h5>
+            <p>Perteneces a la compañia w-motors</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/imagen/2020-chevrolet-corvette-stingray-motor.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Chevrolet Corvette stringray</h5>
+            <p>Otro model de chevrolet corvette stringray</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="historia-compañia">
+      <h1 class="titulo">Auto Deal</h1>
+      <label>Un <span>concesionario</span> o <span>concesionaria</span> es un comercio minorista que vende automóviles
+        nuevos o de segunda mano. En la mayoría de los casos, los concesionarios son empresas independientes,
+        autorizadas por las marcas fabricantes a vender sus vehículos por medio de un contrato de concesión. Para
+        operar, los concesionarios emplean vendedores especializados y disponen de un salón de ventas para exhibir sus
+        productos al público. Muchos desarrollan también actividades periféricas a la venta de autos, como revisión y
+        mantenimiento mecánico, venta de repuestos, ejecución de garantías y gestiones de matrícula.</label>
+    </div>
+  </div>
+  <div class="contenedor-presentacion">
+    <div>
+      <h1 class="titulo">Puede encontrarnos en</h1>
+      <hr>
+      <iframe id="mapa"
+        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d243214.9771737479!2d-62.9484631!3d-17.7336093!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sbo!4v1619930705515!5m2!1ses!2sbo"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div id=lista-redes-sociales>
+      <h1 class="titulo">Nuestras redes sociales</h1>
+      <hr>
+      <ul class="lista-Redes">
+        <li><a href="https://www.facebook.com/">Facebook <img src="../assets/imagen/facebook_logo.png" alt=""></a></li>
+        <li><a href="https://web.whatsapp.com/">Whatsapp <img src="../assets/imagen/whatsapp_logo.png" alt=""></a></li>
+        <li><a href="https://adssettings.google.com/u/1/authenticated?hl=es">Google+ <img src="../assets/imagen/google_logo.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="contenedor-Sugerencias">
+    <h1 class="titulo">Sugerencias</h1>
+    <hr>
+    <form class="formulario-backgroud">
+
+      <div class="row">
+        <div class="mb-3 col-6">
+          <label for="exampleInputPassword1" class="form-label" placeholder="hola">Nombre completo</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Ejemplo: email@email.com</div>
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label class="form-check-label mb-3" for="mensaje">Sugerencias</label>
+        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+        <div class="col-md-12" id="mensaje">
+          <textarea class="form-control" id="message" name="message" placeholder="Ingrese su sugerencias"
+            rows="7"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary boton-envio">Enviar</button>
+    </form>
+  </div>
+  <footer id="pie-pagina">
+    <ul class="lista-Redes">
+      <li><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><a href="">Whatsapp</a></li>
+      <li><a href="">Google+</a></li>
+    </ul>
+    <h3>Car dealer @Inconporate</h3>x
+  </footer>
+</body>
+
+</html>

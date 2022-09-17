@@ -1,0 +1,93 @@
+body{
+    position: absolute;
+    height: 100%;
+}
+.container-storage{
+    width: 100%;
+    padding: 5%;
+    
+}
+#Container-buscador{
+    border: black solid 1px;
+    border-radius: 1%;
+    padding: 2%;
+}
+
+.sotrage-list{
+    display: grid;
+    margin: 5%;
+    border: black solid;
+}
+#sotrage-list
+{
+    border: chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#sotrage-list > div
+{
+    background: rgba(69, 99, 138, 0.774);
+    background-color: linear-gradient(30deg,rgb(170, 216, 211) 40%,rgba(13, 226, 49, 0.836) 50.7%);
+    border: rgba(204, 201, 201, 0.534) solid;
+    border-radius: 5%;
+    padding: 2%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.738);
+    color: azure;
+    width: 300px;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.roundImage
+{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+#pie-pagina{
+    position: relative;
+    bottom: 0;
+}
+.ComprarBoton{
+    margin: 5%;
+    border: greenyellow solid;
+    color: greenyellow;
+    padding: 3%;
+    border-radius: 1em;
+    background: none;
+}
+.ComprarBoton:hover{
+    border: green solid;    
+    background: green;
+    color: whitesmoke;
+}
+#AtrasBtn{
+    position: relative;
+    bottom: 10px;
+    float: right;
+    background: none;
+    border: peru solid;
+    padding: 1%;
+    color: peru;
+    border-radius: 5%;
+}
+#AtrasBtn:hover{
+    background: peru;
+    color: whitesmoke;
+}
+#buscarBtn{
+    position: relative;
+    background: none;
+    border: peru solid;
+    padding: 0.5%;
+    color: whitesmoke;
+    border-radius: 5%;
+}
+#buscarBtn:hover{
+    background: peru;
+    color: whitesmoke;
+}
