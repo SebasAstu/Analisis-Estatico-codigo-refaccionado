@@ -5,36 +5,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     
     
     const baseUrl='http://localhost:3030';
-    
-    /*function fetchTeams(){
-        debugger
-        const url=`${baseUrl}/teams`;
-        //cambiamos el fetch('https://jsonplaceholder.typicode.com/users') por fetch(url)
-        fetch(url)
-        .then((response) => {
-            status=response.status; 
-            return response.json();
-            // if(response.status==200)
-            // {
-            //     return response.json()
-            // }
-            // else{
-            //     alert("error")
-            //     return response.json()
-            // }
-        })
-        .then((data) => {
-            if(status==200){
-                console.log(data)
-                let teamList=data.map(team=>{return `<li> name: ${team.name} | City:${team.city}</li>`});
-                var teamContent=`<ul>${teamList.join('')}</ul>`;
-                document.getElementById('teams-container').innerHTML=teamContent
-            }
-            else{
-                alert(data)
-            }
-        })
-    }*/
+        
     async function fetchClients(){
         //debugger
         const url=`${baseUrl}/client`;
