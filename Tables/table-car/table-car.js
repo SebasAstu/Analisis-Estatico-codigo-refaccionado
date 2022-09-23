@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         console.log(clientID)
         let urlOther = `http://127.0.0.1:5500/views/view-car/view-car.html?CarID=${clientID}`;
         window.open(urlOther)
-        // window.location.href="../../../main.html";
+        
     }
     async function deleteClient(b) {
         const baseUrl = 'http://localhost:3030';
