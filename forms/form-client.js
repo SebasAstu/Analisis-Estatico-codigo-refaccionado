@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 dateOfBirth: event.currentTarget.dateOfBirth.value == "" ? new Date() : event.currentTarget.dateOfBirth.value,
                 gender: event.currentTarget.gender.value == "" ? "null" : event.currentTarget.gender.value,
                 email: event.currentTarget.email.value == "" ? "null" : event.currentTarget.email.value,
-                imagen: event.currentTarget.imagen.value == "" ? "null" : "null",
+                imagen: event.currentTarget.imagen.value="null" ,
                 imagenURL: event.currentTarget.imagen.value == "" ? "null" : event.currentTarget.imagen.value,
                 phoneNumber: parseInt(event.currentTarget.phoneNumber.value == "" ? "0" : event.currentTarget.phoneNumber.value)
             };
@@ -96,8 +96,20 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     function verificarFormulario(params) {
         let verificar = 0
-        params.currentTarget.name.value != "" ? (params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white") : (params.currentTarget.name.style.backgroundColor = "red", verificar += 1);
-        params.currentTarget.lastName.value != "" ? (params.currentTarget.lastName.value, params.currentTarget.lastName.style.backgroundColor = "white") : (params.currentTarget.lastName.style.backgroundColor = "red", verificar += 1);
+        let nameParam=params.currentTarget.name.value;
+        if( nameParam!= ""){
+            params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white"
+        }
+        else{
+            params.currentTarget.name.style.backgroundColor = "red", verificar += 1 
+        }
+        let lastNameParam=params.currentTarget.lastName.value
+        if( lastNameParam!= ""){
+            params.currentTarget.lastName.value, params.currentTarget.lastName.style.backgroundColor = "white"
+        }
+        else{
+            params.currentTarget.lastName.style.backgroundColor = "red", verificar += 1 
+        }
         return verificar;
     }
     async function updateClient(event) {
