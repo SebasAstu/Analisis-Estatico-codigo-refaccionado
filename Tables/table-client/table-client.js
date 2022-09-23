@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     const baseUrl='http://localhost:3030';
         
     async function fetchClients(){
-        //debugger
+        
         const url=`${baseUrl}/client`;
         //cambiamos el fetch('https://jsonplaceholder.typicode.com/users') por fetch(url)
         let response= await fetch(url);
