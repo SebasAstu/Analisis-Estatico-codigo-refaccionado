@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         // })
         console.log(dataglobal)
         if (window.confirm(`¿Esta seguro de eliminar el automovil ${data.name} de la marca ${data.brand}?`)) {
-            //debugger
+            
             console.log(this);
             console.log("this", this.dataset)
             console.log("this", this.dataset.deleteClientId)
