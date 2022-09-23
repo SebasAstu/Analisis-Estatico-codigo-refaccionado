@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         window.location.href = "../../login/login.html";
     }
     
-    let status;
+    
     const baseUrl='http://localhost:3030';
     
     /*function fetchTeams(){
