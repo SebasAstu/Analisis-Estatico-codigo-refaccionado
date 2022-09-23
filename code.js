@@ -55,7 +55,6 @@ var imag=['https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200703104728-la
     contador=0;
 function carrousel(contenedor){
     contenedor.addEventListener('click',e=>{
-        //debugger
         let atras=contenedor.querySelector('.atras'),
         adelante=contenedor.querySelector('.adelante'),
         div_img=contenedor.querySelector('.carrusel_Tarjetas'),
@@ -99,19 +98,3 @@ window.addEventListener("DOMContentLoaded",()=>{
     let conte=document.getElementById("carrusel")
     carrousel(conte)
 });
-// document.addEventListener("DOMContentLoaded",function(event){
-//     function carrusel(contenedor){
-//         let ant=document.getElementById("carrousel1")
-//         const sig=document.getElementById("carrousel1")
-//         if(number=="2"){
-//             console.log("atras")
-//             ant.style.backgroundImage="url('https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200703104728-labrador-retriever-stock-super-169.jpg?quality=100&strip=info')"
-//         }
-//         else{
-//             console.log("adelante")
-//             sig.style.backgroundImage="url('https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/10/30/16040649809238.jpg')"  
-//         }
-//         console.log("carrousel1",doc)
-//         console.log("event",event) 
-//     }
-// }); 
