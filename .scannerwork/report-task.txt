@@ -1,6 +1,6 @@
 projectKey=CarDealer-Limpio
 serverUrl=http://localhost:9000
-serverVersion=8.9.9.56886
+serverVersion=9.5.0.56709
 dashboardUrl=http://localhost:9000/dashboard?id=CarDealer-Limpio
-ceTaskId=AYNSBA2T-6DWZOLgxsEs
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYNSBA2T-6DWZOLgxsEs
+ceTaskId=AYNqhx5B3taHq4cp-Hik
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYNqhx5B3taHq4cp-Hik

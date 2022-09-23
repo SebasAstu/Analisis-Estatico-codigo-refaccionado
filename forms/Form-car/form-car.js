@@ -97,7 +97,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     function verificarFormulario(params) {
         let verificar = 0
-        params.currentTarget.name.value != "" ? (params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white") : (params.currentTarget.name.style.backgroundColor = "red", verificar += 1);
+        //params.currentTarget.name.value != "" ? (params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white") : (params.currentTarget.name.style.backgroundColor = "red", verificar += 1);
+        if(params.currentTarget.name.value != ""){
+            params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white"
+        }
+        else{
+            params.currentTarget.name.style.backgroundColor = "red", verificar += 1
+        }
         return verificar;
     }
     async function updateAutomovil(event) {
