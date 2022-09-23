@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         }
         catch (error) {
-            var errorText = await error.text();
-            alert(errorText)
+            var error_Text = await error.text();
+            alert(error_Text)
         }
     }
     function ListaTR(ListaClientes) {
