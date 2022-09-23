@@ -103,7 +103,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
         else{
             params.currentTarget.name.style.backgroundColor = "red", verificar += 1 
         }
-        params.currentTarget.lastName.value != "" ? (params.currentTarget.lastName.value, params.currentTarget.lastName.style.backgroundColor = "white") : (params.currentTarget.lastName.style.backgroundColor = "red", verificar += 1);
+        let lastNameParam=params.currentTarget.lastName.value
+        if( lastNameParam!= ""){
+            params.currentTarget.lastName.value, params.currentTarget.lastName.style.backgroundColor = "white"
+        }
+        else{
+            params.currentTarget.lastName.style.backgroundColor = "red", verificar += 1 
+        }
         return verificar;
     }
     async function updateClient(event) {
