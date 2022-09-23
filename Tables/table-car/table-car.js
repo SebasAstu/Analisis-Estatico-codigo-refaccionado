@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         return res;
     }
     function editClient(a) {
-        //debugger
+        
         let clientID = this.dataset.editClientId;
         console.log(this);
         let urlO = `http://127.0.0.1:5500/forms/Form-car/form-car.html?CarID=${clientID}&update=true&type=storagecar`
