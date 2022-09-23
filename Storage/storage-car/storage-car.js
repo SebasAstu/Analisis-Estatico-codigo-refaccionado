@@ -40,8 +40,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
         catch (error) {
-            var errorText = await error.text();
-            alert(errorText)
+            var error_Text = await error.text();
+            alert(error_Text)
         }
     }
     function buyCar(b) {
@@ -50,11 +50,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     var fraccionar = queryParams[1].split('=');
     console.log("fr",fraccionar)
     var clienteID = fraccionar[1]
-        const baseUrl = 'http://localhost:3030';
+        const base_Url = 'http://localhost:3030';
         let carid=this.dataset.buyClientCarId
         console.log("carid",carid)
-        const url = `${baseUrl}/client/${clienteID}/Car/${carid}`;
-        fetch(url,{method: 'POST'}).then((res) => {
+        const url_ = `${base_Url}/client/${clienteID}/Car/${carid}`;
+        fetch(url_,{method: 'POST'}).then((res) => {
             console.log("res",res)
             if (res.status == 201) {
                 alert("Compra exitosa")
