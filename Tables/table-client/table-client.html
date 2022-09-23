@@ -17,16 +17,16 @@
             <a href="../../main.html"><img src="../../assets/imagen/Logo_Car_Dealer.png" alt=""></a>
         </div>
         <ul id="opciones">
-            <!-- <li><a href="./Tables/table-client/table-client.html">Tablas</a></li>
+            
             <li><a href="./forms/form-client.html">Registro</a></li> -->
             <div class="dropdown">
                 <button class="dropbtn"><a href="../../Storage/storage-car/storage-car.html">Autos</a>
-                    <i class="fa fa-caret-down"></i>
+                    <em class="fa fa-caret-down"></em>
                 </button>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Registro
-                    <i class="fa fa-caret-down"></i>
+                    <em class="fa fa-caret-down"></em>
                 </button>
                 <div class="dropdown-content">
                     <a href="../../forms/form-client.html">Registro Cliente</a>
@@ -35,7 +35,7 @@
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Tablas
-                    <i class="fa fa-caret-down"></i>
+                    <em class="fa fa-caret-down"></em>
                 </button>
                 <div class="dropdown-content">
                     <a href="../../Tables/table-client/table-client.html">Tabla Clientes</a>
@@ -50,14 +50,14 @@
                 </button>
             </div>
         </div>
-            <!-- <li><a href="./About/about.html">about</a></li>
+            
             <li><a href="./login/login.html">Iniciar Sesion</a></li> -->
         </ul>
     </nav>
     <div class="contenedor-tabla">
         <h1 class="titulo ">Listado de todos los Clientes</h1>
         <hr>
-        <table class="tableStyle">
+        <table aria-describedby="mydesc" class="tableStyle">
             <th id="Tabla-lista">
                 <tr id="Tabla-titulos">
                     <th id="Primer-Nombre">Primer Nombre</th>
