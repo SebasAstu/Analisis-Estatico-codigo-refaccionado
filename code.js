@@ -51,7 +51,7 @@ function saludar(text_areresp){
 var imag=['https://cnnespanol.cnn.com/wp-content/uploads/2020/07/200703104728-labrador-retriever-stock-super-169.jpg?quality=100&strip=info','https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/10/30/16040649809238.jpg','./assets/imagen/w-motors-lykan-hypersport.928748.jpg'],
     texto=['Los cánidos (Canidae) son una familia de mamíferos del orden Carnivora, de régimen carnívoro. Entre otros, abarca a lobos (incluyendo perros), chacales, coyotes, cuones, dingos, licaones, aguarás guazú, guarás, zorros de la Pampa o aguarachays, zorros culpeo y vulpinos (zorros). Estos animales son digitígrados. Sus principales características en general, incluyen hocico largo y fino y cuerpo esbelto.',
     'El Lamborghini Murciélago es un automóvil superdeportivo diseñado y producido por el fabricante italiano Lamborghini en su fábrica de Sant´Agata Bolognese, con motor central-trasero montado longitudinalmente y tracción integral',
-    'El “Lycan” es la más avanzada especie de lobos en las leyendas místicas. Escondidio bajo una elegante y lujosa máscara, el Lycan puede transformarse en cualquier cosa y, dado el tiempo, la necesidad deberá levantarse para mostrar sus poderes y liderazgo']
+    'El “Lycan” es la más avanzada especie de lobos en las leyendas místicas. Escondidio bajo una elegante y lujosa máscara, el Lycan puede transformarse en cualquier cosa y, dado el tiempo, la necesidad deberá levantarse para mostrar sus poderes y liderazgo.']
      let contador=0;
 function carrousel(contenedor){
     contenedor.addEventListener('click',e=>{
