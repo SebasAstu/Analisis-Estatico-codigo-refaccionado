@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         console.log("2", trueclientID)
         console.log("3", typeof updating, "valor", updating)
         let a = fraccionar[2]
-        a != undefined ? (updating = true) : (updating = false)
+        a != undefined ? (updating = true) : (updating = false) 
         console.log("4", typeof updating, "valor", updating)
     }
     let teams = [];
@@ -97,8 +97,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
     function verificarFormulario(params) {
         let verificar = 0
-        if(params.currentTarget.name.value != ""){
-            params.currentTarget.name.value 
+        if(params.currentTarget.name.value != ""){ 
             params.currentTarget.name.style.backgroundColor = "white"
         }
         else{
