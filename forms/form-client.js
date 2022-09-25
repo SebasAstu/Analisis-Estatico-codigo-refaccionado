@@ -89,17 +89,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
         let verificar = 0
         let nameParam=params.currentTarget.name.value;
         if( nameParam!= ""){
-            params.currentTarget.name.value, params.currentTarget.name.style.backgroundColor = "white"
+            params.currentTarget.name.style.backgroundColor = "white"
         }
         else{
-            params.currentTarget.name.style.backgroundColor = "red", verificar += 1 
+            params.currentTarget.name.style.backgroundColor = "red"
+            verificar += 1 
         }
         let lastNameParam=params.currentTarget.lastName.value
         if( lastNameParam!= ""){
-            params.currentTarget.lastName.value, params.currentTarget.lastName.style.backgroundColor = "white"
+            params.currentTarget.lastName.style.backgroundColor = "white"
         }
         else{
-            params.currentTarget.lastName.style.backgroundColor = "red", verificar += 1 
+            params.currentTarget.lastName.style.backgroundColor = "red"
+            verificar += 1 
         }
         return verificar;
     }
