@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             if (response.status === 200) {
 
                 response.json().then((data) => {
-                    //debugger;
+                    
                     sessionStorage.setItem("jwt", data.message);
                     console.log("SESION", sessionStorage)
                     //window.location.href = "../main.html";
