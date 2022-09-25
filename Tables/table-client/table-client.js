@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded',function(event){
         console.log("this",this.dataset)
         console.log("this",this.dataset.deleteClientId)
         let clientId=this.dataset.deleteClientId
-        let url = `${baseUrl}/client/${clientId}`;
-        fetch(url, { 
+        let urlDelete = `${baseUrl}/client/${clientId}`;
+        fetch(urlDelete, { 
         method: 'DELETE' 
-        }).then((data)=>{
-            if(data.status === 200){
+        }).then((response)=>{
+            if(response.status === 200){
                 alert('El cliente fue eliminado');
                 fetchClients();
             }
