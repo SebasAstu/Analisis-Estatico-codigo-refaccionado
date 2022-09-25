@@ -1,1 +1,3 @@
-.scannerwork
+.scannerwork/**
+sonar-project.properties
+.scannerwork/report-task.txt

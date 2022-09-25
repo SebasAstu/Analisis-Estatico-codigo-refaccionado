@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded',function(event){
     if(!Boolean(sessionStorage.getItem("jwt"))){
         window.location.href = "../../login/login.html";
     }
-    let teams=[];
-    let status;
     const baseUrl='http://localhost:3030';
+        
     async function fetchClients(){
         const url=`${baseUrl}/client`;
         let response= await fetch(url);
