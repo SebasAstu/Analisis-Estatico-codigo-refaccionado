@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded',function(event){
         window.open(urlOther)
     } 
     async function deleteClient(b){
-        const baseUrl='http://localhost:3030';
         const url=`${baseUrl}/client/${this.dataset.deleteClientId}`;
         let response= await fetch(url);
         let data;
