@@ -22,22 +22,23 @@ function readURL(input) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    if(!Boolean(sessionStorage.getItem("jwt"))){
+document.addEventListener('DOMContentLoaded', function (_event) {
+    let token=!Boolean(sessionStorage.getItem("jwt"))
+    if(token){
         window.location.href = "../../login/login.html";
     }
     let updating = false;
     let trueclientID;
 
-    var queryParams = window.location.search.split('?');
+    let queryParams = window.location.search.split('?');
     if (queryParams.length > 1) {
         console.log("1", queryParams)
-        var fraccionar = queryParams[1].split('=');
+        let fraccionar = queryParams[1].split('=');
         console.log("fraccionar",fraccionar)
-        var clientID = fraccionar[1].split('&')
+        let clientID = fraccionar[1].split('&')
 
-        var typeCar=fraccionar[3].split('&')[0]
-        var truecarID=parseInt(fraccionar[4])
+        let typeCar=fraccionar[3].split('&')[0]
+        let truecarID=parseInt(fraccionar[4])
         console.log("typecar",typeCar)
         console.log("clientID",clientID)
         trueclientID = clientID[0]
