@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
                     
                     sessionStorage.setItem("jwt", data.message);
                     console.log("SESION", sessionStorage)
-                    //window.location.href = "../main.html";
+                    
                     window.location.href = "../Storage/storage-car/storage-car.html";
 
                 });
