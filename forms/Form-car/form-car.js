@@ -38,14 +38,13 @@ document.addEventListener('DOMContentLoaded', function (_event) {
         let clientID = fraccionar[1].split('&')
 
         let typeCar=fraccionar[3].split('&')[0]
-        let truecarID=parseInt(fraccionar[4])
         console.log("typecar",typeCar)
         console.log("clientID",clientID)
         trueclientID = clientID[0]
         console.log("2", trueclientID)
         console.log("3", typeof updating, "valor", updating)
         let a = fraccionar[2]
-        a != undefined ? (updating = true) : (updating = false) 
+        a != undefined ? (!updating) : (updating) 
         console.log("4", typeof updating, "valor", updating)
     }
     
