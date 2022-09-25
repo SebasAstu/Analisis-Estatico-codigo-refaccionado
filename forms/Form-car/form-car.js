@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function (_event) {
     if(token){
         window.location.href = "../../login/login.html";
     }
-    let updating = false;
+    var updating = false;
     let trueclientID;
 
     let queryParams = window.location.search.split('?');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function (_event) {
         console.log("2", trueclientID)
         console.log("3", typeof updating, "valor", updating)
         let a = fraccionar[2]
-        a != undefined ? (!updating) : (updating) 
+        a != undefined ? (updating=true) : (updating=false) 
         console.log("4", typeof updating, "valor", updating)
     }
     
