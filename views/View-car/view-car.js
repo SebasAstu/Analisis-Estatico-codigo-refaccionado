@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",function(event){
             if(response.status==200){
                 let data = await response.json();
                 console.log("data",data)
-                //let imagen=`<img src="${data.imagen}" alt="">`
+                
                 const imageUrl = data.imagen? `${baseUrl}/${data.imagen}` : "";
                 let imagenPerfil=document.getElementById("imagenPerfil")
                 imagenPerfil.src=imageUrl
