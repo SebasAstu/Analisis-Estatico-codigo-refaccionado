@@ -98,7 +98,8 @@ document.addEventListener('DOMContentLoaded', function (_event) {
             params.currentTarget.name.style.backgroundColor = "white"
         }
         else{
-            params.currentTarget.name.style.backgroundColor = "red", verificar += 1
+            params.currentTarget.name.style.backgroundColor = "red"
+            verificar += 1
         }
         return verificar;
     }
@@ -125,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function (_event) {
                 price: parseInt(event.currentTarget.price.value == "" ? "0" : event.currentTarget.price .value)
         };
         console.log("data", data)
-        let aux11=document.getElementById("formulario-auto")
         const formData=new FormData(event.currentTarget)
         console.log("formDataf",formData)
         fetch(url, {
