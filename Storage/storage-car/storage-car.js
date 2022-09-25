@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
         catch (error) {
             errorText = await error.text();
-            alert(error_Text)
+            alert(errorText)
         }
     }
     function buyCar(b) {
