@@ -1,11 +1,11 @@
 window.addEventListener('load',function(evenet){
     const baseUrl='http://localhost:3030';
     function CreateUser(e){
-        //debugger
+        
         e.preventDefault();
         const url = `${baseUrl}/authentication/user`;
         
-        //console.log("e",e);
+        
         var data = {
             Email: e.currentTarget.Correo_user.value,
             Password: e.currentTarget.contraseña.value,

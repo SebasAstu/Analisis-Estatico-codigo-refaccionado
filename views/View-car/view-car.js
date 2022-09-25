@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded",function(event){
     }
     var cliente;
     async function cargarVista(eventOne){
-        //alert("entro")
-        //debugger
+        
+        
         console.log("wls",window.location.search)
         var queryParams = window.location.search.split('?');
         console.log("qp",queryParams)
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded",function(event){
             if(response.status==200){
                 let data = await response.json();
                 console.log("data",data)
-                //let imagen=`<img src="${data.imagen}" alt="">`
+                
                 const imageUrl = data.imagen? `${baseUrl}/${data.imagen}` : "";
                 let imagenPerfil=document.getElementById("imagenPerfil")
                 imagenPerfil.src=imageUrl
@@ -36,39 +36,39 @@ document.addEventListener("DOMContentLoaded",function(event){
                 <label><strong>Cantidad disponible</strong>: ${data.amountAvailable}</label><br>
                 <label><strong>Precio</strong>: ${data.price}</label>`
                 infor.innerHTML=info
-                // let cars=data.cars
-                // console.log(cars)
-                // let carList=cars.map(car=>{
-                //     const imageUrlCar = car.imagen? `${baseUrl}/${car.imagen}` : "";
-                //     return [`
-                //  <td>${car.name}</td>
-                //  <td>${car.brand}</td>
-                //  <td>${car.type}</td>
-                //  <td>${car.motorType}</td>
-                //  <td>${car.bodyType}</td>
-                //  <td>${car.price}</td>
-                //  <td>${car.fuelType}</td>
-                //  <td><img src="${imageUrlCar}" alt="" style="width: 100px; height:100px;"></td>
-                //  <td> <button class="verBoton" data-view-client-id="${car.id}">Ver</button></td>
-                //  <td> <button class="editarBoton" data-edit-client-id="${car.id}">Editar</button></td>
-                //  <td> <button class="eliminarBoton" data-delete-client-id="${car.id}">Eliminar</button></td>`]
-                // });
-                // console.log(carList)
-                // var carLista=`${ListaTR(carList).join('')}`;
-                // document.getElementById('listAutos').innerHTML=carLista
                 
-                // let buttonsEdit = document.querySelectorAll('#listAutos tr button[data-edit-client-id]');
-                // for (const buttonE of buttonsEdit) {
-                //     buttonE.addEventListener('click', editClient);
-                // }
-                // let buttonsDelete = document.querySelectorAll('#listAutos tr button[data-delete-client-id]');
-                // for (const buttonD of buttonsDelete) {
-                //     buttonD.addEventListener('click', deleteClient);
-                // }
-                // let buttonView=document.querySelectorAll('#listAutos tr button[data-view-client-id]');
-                // for(const buttonV of buttonView){
-                //     buttonV.addEventListener('click',viewClient);
-                // }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }
         }
         catch{

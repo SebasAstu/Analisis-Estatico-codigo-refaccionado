@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     function login(event) {
         //debugger;
-        //console.log(event.currentTarget);
+        
 
         event.preventDefault();
         const url = `${baseUrl}/authentication/Login`;
@@ -31,25 +31,19 @@ window.addEventListener('DOMContentLoaded', function (event) {
             if (response.status === 200) {
 
                 response.json().then((data) => {
-                    //debugger;
+                    
                     sessionStorage.setItem("jwt", data.message);
                     console.log("SESION", sessionStorage)
-                    //window.location.href = "../main.html";
+                    
                     window.location.href = "../Storage/storage-car/storage-car.html";
 
                 });
             } else {
                 alert("No Se puede iniciar sesion")
-            //     let err = new Error("HTTP status code: " + response.status)
-            //     err.response = response
-            //     err.status = response.status
-            //     console.log("err",err.message)
-            //     throw err
-                //response.text().then(text =>{ throw Error(text)});
             }
         }).catch((err) => {
 
-            //debugger;
+            
             console.log("catch",err.json())
             alert(err.message);
         });
