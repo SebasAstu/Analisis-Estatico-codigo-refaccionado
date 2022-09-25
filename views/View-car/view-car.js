@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded",function(event){
     }
     var cliente;
     async function cargarVista(eventOne){
-        //alert("entro")
-        //debugger
+        
+        
         console.log("wls",window.location.search)
         var queryParams = window.location.search.split('?');
         console.log("qp",queryParams)
