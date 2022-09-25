@@ -1,5 +1,4 @@
 function readURL(input) {
-    //debugger
     console.log(input)
     const imagen = document.getElementById("imagenView")
     if (input.files && input.files[0]) {
@@ -10,10 +9,6 @@ function readURL(input) {
             imagen.src = e.target.result
             imagen.width = "350";
             imagen.height = "250";
-            /*$('#blah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);*/
         };
 
         reader.readAsDataURL(input.files[0]);
@@ -42,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let status;
     const baseUrl = 'http://localhost:3030';
     function PostClient(event) {
-        //debugger
         event.preventDefault();
         let c = verificarFormulario(event)
         if (c != 0) {
@@ -66,20 +60,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 phoneNumber: parseInt(event.currentTarget.phoneNumber.value == "" ? "0" : event.currentTarget.phoneNumber.value)
             };
             console.log(data)
-            //debugger
             const formData = new FormData(event.currentTarget)
             var formData1 = {};
             for (var pair of formData.entries()) {
-                formData1[pair[0]] = pair[1]; //To convert to object
+                formData1[pair[0]] = pair[1];
             }
             const plainFormData = Object.fromEntries(formData.entries());
             const formDataJsonString = JSON.stringify(plainFormData);
             console.log("plainFormData", plainFormData)
             console.log("formDataJsonString", formDataJsonString);
             fetch(url, {
-                //headers: { "Content-type": "multipart/form-data" },
                 method: 'POST',
-                //body: JSON.stringify(formData1)
                 body: formData
             }).then(response => {
                 console.log("res", response.body)
@@ -130,9 +121,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         console.log("data", data)
         const formData = new FormData(event.currentTarget)
         await fetch(url, {
-            //headers: { "Content-type": "application/json" },
             method: 'PUT',
-            //body: JSON.stringify(data)
             body: formData
         }).then(response => {
             console.log("res", response.body)
@@ -145,22 +134,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 response.text().then(response=>{
                     alert(response)
                 })
-                //response.text().then(alert("No se puede actualizar el cliente "));
             }
         })
-        // let response= await fetch(url,{ method: 'PUT',body: formData});
-        // let data;
-        // try{
-        //     if(response.status==200){
-        //         data = await response.json();
-        //         alert("cliente fue actualizado")
-        // //     }
-        //     }
-        // }
-        // catch{
-        //     alert("No se encontro al cliente")
-        // }
-
     }
 
     async function CargarClient(event) {
@@ -189,14 +164,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
             aux.children[1].children[5].readOnly = true
             aux.children[1].children[5].style.backgroundColor = "lightblue"
             aux.children[1].children[7].value = new Date(data.dateOfBirth)
-            // console.log(new Date(data.dateOfBirth))
             let imagenPerfil = document.getElementById("imagenView")
             imagenPerfil.style.visibility = "visible"
             imagenPerfil.width = "350";
             imagenPerfil.height = "250";
             imagenPerfil.src = imageUrlCar
-
-            //aux.children[3].children[2].src=imageUrlCar
             aux.children[3].children[5].value = data.email
             aux.children[3].children[7].value = data.phoneNumber
             aux.children[6].children[0].value = data.gender
@@ -211,6 +183,5 @@ document.addEventListener('DOMContentLoaded', function (event) {
         document.getElementById("registrarBoton").value = "Actualizar"
         CargarClient();
         document.getElementById("formulario-auto").addEventListener('submit', updateClient)
-        //document.getElementById("formulario-auto").addEventListener('click', updateClient)
     }
 });
