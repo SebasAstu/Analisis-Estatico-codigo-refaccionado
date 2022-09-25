@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     const url = `${baseUrl}/storage`;
     async function CarsStorage(e) {
         let response = await fetch(url);
+        let errorText;
         try {
             if (response.status == 200) {
                 let data = await response.json();
@@ -35,12 +36,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 }
             }
             else {
-                var errorText = await response.text();
+                errorText = await response.text();
                 alert("no se pude comunicar")
             }
         }
         catch (error) {
-            var error_Text = await error.text();
+            error_Text = await error.text();
             alert(error_Text)
         }
     }
