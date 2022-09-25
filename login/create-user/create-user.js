@@ -1,7 +1,7 @@
 window.addEventListener('load',function(evenet){
     const baseUrl='http://localhost:3030';
     function CreateUser(e){
-        //debugger
+        
         e.preventDefault();
         const url = `${baseUrl}/authentication/user`;
         
