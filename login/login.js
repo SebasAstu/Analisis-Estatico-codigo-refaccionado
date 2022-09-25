@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }).catch((err) => {
 
-            //debugger;
+            
             console.log("catch",err.json())
             alert(err.message);
         });
