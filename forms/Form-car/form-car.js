@@ -1,5 +1,4 @@
 function readURL(input) {
-    //debugger
     console.log(input)
     const imagen=document.getElementById("imagenView")
     if (input.files && input.files[0]) {
@@ -10,10 +9,6 @@ function readURL(input) {
            imagen.src= e.target.result
            imagen.width="350";
            imagen.height="250";
-            /*$('#blah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);*/
         };
 
         reader.readAsDataURL(input.files[0]);
@@ -22,36 +17,34 @@ function readURL(input) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    if(!Boolean(sessionStorage.getItem("jwt"))){
+document.addEventListener('DOMContentLoaded', function (_event) {
+    let token=!Boolean(sessionStorage.getItem("jwt"))
+    if(token){
         window.location.href = "../../login/login.html";
     }
-    let updating = false;
+    var updating = false;
     let trueclientID;
 
-    var queryParams = window.location.search.split('?');
+    let queryParams = window.location.search.split('?');
     if (queryParams.length > 1) {
         console.log("1", queryParams)
-        var fraccionar = queryParams[1].split('=');
+        let fraccionar = queryParams[1].split('=');
         console.log("fraccionar",fraccionar)
-        var clientID = fraccionar[1].split('&')
+        let clientID = fraccionar[1].split('&')
 
-        var typeCar=fraccionar[3].split('&')[0]
-        var truecarID=parseInt(fraccionar[4])
+        let typeCar=fraccionar[3].split('&')[0]
         console.log("typecar",typeCar)
         console.log("clientID",clientID)
         trueclientID = clientID[0]
         console.log("2", trueclientID)
         console.log("3", typeof updating, "valor", updating)
         let a = fraccionar[2]
-        a != undefined ? (updating = true) : (updating = false) 
+        a != undefined ? (updating=true) : (updating=false) 
         console.log("4", typeof updating, "valor", updating)
     }
-    let teams = [];
-    let status;
+    
     const baseUrl = 'http://localhost:3030';
     function ObtenerAutomovil(event) {
-        //debugger
         event.preventDefault();
         let c = verificarFormulario(event)
         if (c != 0) {
@@ -74,13 +67,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 amountAvailable: parseInt(event.currentTarget.amountAvailable.value == "" ? "0" : event.currentTarget.amountAvailable.value),
                 price: parseInt(event.currentTarget.price.value == "" ? "0" : event.currentTarget.price .value)
             };
-            console.log(data)
-            //debugger
+            console.log(data)   
             const formData=new FormData(event.currentTarget)
             fetch(url, {
-                //headers: { "Content-type": "application/json; charset=UTF-8" },
                 method: 'POST',
-                //body: JSON.stringify(data)
                 body:formData
             }).then(response => {
                 console.log("res", response.body)
@@ -101,12 +91,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
             params.currentTarget.name.style.backgroundColor = "white"
         }
         else{
-            params.currentTarget.name.style.backgroundColor = "red", verificar += 1
+            params.currentTarget.name.style.backgroundColor = "red"
+            verificar += 1
         }
         return verificar;
     }
     async function updateAutomovil(event) {
-        //debugger
         event.preventDefault();
         let url 
         if(typeCar=="storagecar"){
@@ -128,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 price: parseInt(event.currentTarget.price.value == "" ? "0" : event.currentTarget.price .value)
         };
         console.log("data", data)
-        let aux11=document.getElementById("formulario-auto")
         const formData=new FormData(event.currentTarget)
         console.log("formDataf",formData)
         fetch(url, {
@@ -152,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     }
     async function CargarAutomovil(event) {
-        //debugger
         let aux=document.getElementById("formulario-auto")
         console.log(trueclientID)
         console.log("aux",aux.children)
