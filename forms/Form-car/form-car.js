@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let status;
     const baseUrl = 'http://localhost:3030';
     function ObtenerAutomovil(event) {
-        //debugger
         event.preventDefault();
         let c = verificarFormulario(event)
         if (c != 0) {
@@ -74,8 +73,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 amountAvailable: parseInt(event.currentTarget.amountAvailable.value == "" ? "0" : event.currentTarget.amountAvailable.value),
                 price: parseInt(event.currentTarget.price.value == "" ? "0" : event.currentTarget.price .value)
             };
-            console.log(data)
-            //debugger
+            console.log(data)   
             const formData=new FormData(event.currentTarget)
             fetch(url, {
                 //headers: { "Content-type": "application/json; charset=UTF-8" },
