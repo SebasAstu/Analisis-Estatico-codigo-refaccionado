@@ -40,12 +40,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 });
             } else {
                 alert("No Se puede iniciar sesion")
-            //     let err = new Error("HTTP status code: " + response.status)
-            //     err.response = response
-            //     err.status = response.status
-            //     console.log("err",err.message)
-            //     throw err
-                //response.text().then(text =>{ throw Error(text)});
             }
         }).catch((err) => {
 
