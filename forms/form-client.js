@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 dateOfBirth: event.currentTarget.dateOfBirth.value == "" ? new Date() : event.currentTarget.dateOfBirth.value,
                 gender: event.currentTarget.gender.value == "" ? "null" : event.currentTarget.gender.value,
                 email: event.currentTarget.email.value == "" ? "null" : event.currentTarget.email.value,
-                imagen: event.currentTarget.imagen.value="null" ,
+                imagen: "null" ,
                 imagenURL: event.currentTarget.imagen.value == "" ? "null" : event.currentTarget.imagen.value,
                 phoneNumber: parseInt(event.currentTarget.phoneNumber.value == "" ? "0" : event.currentTarget.phoneNumber.value)
             };
