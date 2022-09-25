@@ -1,5 +1,4 @@
 function readURL(input) {
-    //debugger
     console.log(input)
     const imagen=document.getElementById("imagenView")
     if (input.files && input.files[0]) {
@@ -10,10 +9,6 @@ function readURL(input) {
            imagen.src= e.target.result
            imagen.width="350";
            imagen.height="250";
-            /*$('#blah')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);*/
         };
 
         reader.readAsDataURL(input.files[0]);
@@ -75,9 +70,7 @@ document.addEventListener('DOMContentLoaded', function (_event) {
             console.log(data)   
             const formData=new FormData(event.currentTarget)
             fetch(url, {
-                //headers: { "Content-type": "application/json; charset=UTF-8" },
                 method: 'POST',
-                //body: JSON.stringify(data)
                 body:formData
             }).then(response => {
                 console.log("res", response.body)
@@ -104,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function (_event) {
         return verificar;
     }
     async function updateAutomovil(event) {
-        //debugger
         event.preventDefault();
         let url 
         if(typeCar=="storagecar"){
@@ -149,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function (_event) {
         })
     }
     async function CargarAutomovil(event) {
-        //debugger
         let aux=document.getElementById("formulario-auto")
         console.log(trueclientID)
         console.log("aux",aux.children)
