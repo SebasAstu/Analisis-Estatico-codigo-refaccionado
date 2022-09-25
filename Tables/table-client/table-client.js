@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         const url=`${baseUrl}/client`;
         //cambiamos el fetch('https://jsonplaceholder.typicode.com/users') por fetch(url)
         let response= await fetch(url);
+        let errorText;
         try{
             if(response.status==200){
                 let data = await response.json();
@@ -60,12 +61,12 @@ document.addEventListener('DOMContentLoaded',function(event){
                 }
             }
             else{
-                var errorText=await  response.text();
+                errorText=await  response.text();
             alert("no se pude comunicar")
             }
         }
         catch(error){
-            var errorText=await  error.text();
+            errorText=await  error.text();
             alert(errorText)
         }
     }
@@ -88,7 +89,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         let urlO=`http://127.0.0.1:5500/forms/form-client.html?clientID=${clientID}&update=true`
         window.location.href=urlO
     }
-    function viewClient(event){
+    function viewClient(_event){
         let clientID=this.dataset.viewClientId;
         console.log(clientID)
         let urlOther=`http://127.0.0.1:5500/views/view-client/view-client.html?clientID=${clientID}`;
