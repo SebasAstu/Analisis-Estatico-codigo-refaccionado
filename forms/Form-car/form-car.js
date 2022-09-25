@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         console.log("4", typeof updating, "valor", updating)
     }
     let teams = [];
-    let status;
     const baseUrl = 'http://localhost:3030';
     function ObtenerAutomovil(event) {
         event.preventDefault();
