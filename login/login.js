@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     function login(event) {
         //debugger;
-        //console.log(event.currentTarget);
+        
 
         event.preventDefault();
         const url = `${baseUrl}/authentication/Login`;
