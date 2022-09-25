@@ -37,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 }
             }
             else {
-                var errorText = await response.text();
+                await response.text();
                 alert("no se pude comunicar")
             }
         }
         catch (error) {
-            var error_Text = await error.text();
+            let error_Text = await error.text();
             alert(error_Text)
         }
     }
