@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded',function(event){
         let urlDelete = `${baseUrl}/client/${clientId}`;
         fetch(urlDelete, { 
         method: 'DELETE' 
-        }).then((response)=>{
-            if(response.status === 200){
+        }).then((res)=>{
+            if(res.status === 200){
                 alert('El cliente fue eliminado');
                 fetchClients();
             }
