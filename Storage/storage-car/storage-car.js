@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
         catch (error) {
-            error_Text = await error.text();
+            errorText = await error.text();
             alert(error_Text)
         }
     }
